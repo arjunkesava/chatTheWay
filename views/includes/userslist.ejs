@@ -1,0 +1,53 @@
+<div class="side-one">
+        <!-- Current Logged In User Heading -->
+        <div class="row heading">
+          <div class="col-sm-3 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+              <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+            </div>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot  pull-right">
+            <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+          <div class="col-sm-2 col-xs-2 heading-compose  pull-right">
+            <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+        </div>
+        <!-- Search Box to Search all the Users/Messages -->
+        <div class="row searchBox">
+          <div class="col-sm-12 searchBox-inner">
+            <div class="form-group has-feedback">
+              <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Users List displayed to the Right Side -->
+        <div class="row sideBar">
+          <%
+            if (typeof activeUsers !== 'undefined') {
+            for(var i=0, len = activeUsers.length; i < len; i++){
+          %>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta"><%= activeUsers[i].username %>
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right"><%= activeUsers[i].status %>
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <%}}%>
+        </div>
+        <!-- END Users List displayed to the Right Side -->
+      </div>

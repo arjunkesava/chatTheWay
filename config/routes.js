@@ -31,11 +31,15 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-
-  '/': {
-    view: 'homepage'
+  // Took nearly 4 hours for this Line. BULL SHIT
+  '/' : 'HomepageController.index'
+/*
+  'GET /': {
+    view: 'homepage',
+    controller: 'HomepageController',
+    action: 'index'
   }
-
+*/
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
