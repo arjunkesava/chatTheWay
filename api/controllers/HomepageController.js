@@ -12,6 +12,8 @@ module.exports = {
                 "status": 1
             })
             .then(function(activeUsers) {
+                
+                // Below Query returns all the Active Users
                 User.find({})
                     .then(function(allUsers) {
                         

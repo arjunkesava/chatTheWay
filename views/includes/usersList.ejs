@@ -28,7 +28,7 @@
             if (typeof activeUsers !== 'undefined') {
             for(var i=0, len = activeUsers.length; i < len; i++){
           %>
-            <div class="row sideBar-body">
+            <div class="row sideBar-body" id="chatWithUser_<%=activeUsers[i].id%>">
               <div class="col-sm-3 col-xs-3 sideBar-avatar">
                 <div class="avatar-icon">
                   <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
