@@ -32,14 +32,25 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   // Took nearly 4 hours for this Line. BULL SHIT
-  '/' : 'HomepageController.index'
-/*
-  'GET /': {
-    view: 'homepage',
-    controller: 'HomepageController',
-    action: 'index'
+  '/' : 'HomepageController.index',
+
+  'GET /login': {
+       view: 'login',
+       locals: {
+        layout: false
+       }
+  },
+
+  'POST /login': 'AuthController.login',
+
+  '/logout': 'AuthController.logout',
+
+  'GET /signup': {
+    view: 'signup',
+    locals: {
+      layout: false
+    }
   }
-*/
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

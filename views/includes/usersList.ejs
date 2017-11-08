@@ -6,6 +6,10 @@
               <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
             </div>
           </div>
+          <div class="col-lg-5">
+          <% if (typeof loggedInUserName !== 'undefined')%>
+            <span class="capitalize">Hello <%= loggedInUserName %></span>
+          </div>
           <div class="col-sm-1 col-xs-1  heading-dot  pull-right">
             <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
           </div>

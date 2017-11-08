@@ -1,0 +1,19 @@
+<title>Login - Chat the Way</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/styles/login.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div class="container">
+	<div class="login-container">
+        <div id="output"></div>
+        <div class="avatar"></div>
+        <div class="form-box">
+            <form action="/login" method="POST">
+                <input name="mobile_no" type="text" class="form-control" required="required" placeholder="Mobile Number" title="Please Enter your Mobile Number">
+                <input name="password" type="password" required="required" class="form-control" placeholder="Password" title="Please Enter your Password">
+                <button class="btn btn-info btn-block login" type="submit">Login</button>
+                <br/>New. <a href="/signup">Create One!</a>
+            </form>
+        </div>
+    </div>
+</div>

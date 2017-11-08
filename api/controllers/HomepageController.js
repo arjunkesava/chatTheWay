@@ -8,6 +8,7 @@
 module.exports = {
     index: function(request, response) {
 
+        var loggedInUserName = request.session.userName;
         User.find({
                 "status": 1
             })
@@ -19,6 +20,7 @@ module.exports = {
                         
                         // Currently this Promise, returns  only activeUsers & allContactUsers
                         return response.view('homepage', {
+                            loggedInUserName: loggedInUserName,
                             activeUsers: activeUsers,
                             allUsers: allUsers
                         });

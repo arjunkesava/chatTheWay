@@ -11,6 +11,8 @@ $(function(){
       });
     });
 
+    // This Selector Get the User Data to the Chat Room,
+    // Based on clicking the User Name on Users Menu.
     $("[id^=chatWithUser_]").click(function() {
       var user_id = $(this).attr('id');
       user_id = user_id.substring(13);
